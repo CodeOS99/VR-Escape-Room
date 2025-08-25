@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://r31mqu1317ee"]
+
+[ext_resource type="PackedScene" uid="uid://bmsei7lhoe4rl" path="res://assets/models/doors/door/door.fbx" id="1_u2k1i"]
+
+[node name="door" type="Node3D"]
+
+[node name="model" parent="." instance=ExtResource("1_u2k1i")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)

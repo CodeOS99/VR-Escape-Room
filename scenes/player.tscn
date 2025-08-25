@@ -1,11 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://cox4o5drebclo"]
+[gd_scene load_steps=8 format=3 uid="uid://cox4o5drebclo"]
 
 [ext_resource type="PackedScene" uid="uid://njx823gyk04n" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_hand.tscn" id="1_64ag6"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="2_achia"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_q14x8"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="3_qtbw2"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="4_p6th5"]
+[ext_resource type="PackedScene" uid="uid://raeeicvvindd" path="res://addons/godot-xr-tools/hands/scenes/highpoly/right_hand.tscn" id="5_xl4kd"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="6_xh0ax"]
 
 [node name="player" type="XROrigin3D"]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 
-[node name="XRController3D" type="XRController3D" parent="."]
+[node name="LeftHand" type="XRController3D" parent="."]
+tracker = &"left_hand"
 
-[node name="LeftHand" parent="XRController3D" instance=ExtResource("1_64ag6")]
+[node name="LeftHand" parent="LeftHand" instance=ExtResource("1_64ag6")]
+
+[node name="MovementDirect" parent="LeftHand" instance=ExtResource("2_achia")]
+strafe = true
+
+[node name="FunctionPickup" parent="LeftHand" instance=ExtResource("3_q14x8")]
+
+[node name="FunctionPointer" parent="LeftHand" instance=ExtResource("4_p6th5")]
+show_laser = 2
+laser_length = 1
+show_target = true
+
+[node name="RightHand" type="XRController3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, 0, 0)
+tracker = &"right_hand"
+
+[node name="RightHand" parent="RightHand" instance=ExtResource("5_xl4kd")]
+
+[node name="MovementTurn" parent="RightHand" instance=ExtResource("6_xh0ax")]
+
+[node name="FunctionPickup" parent="RightHand" instance=ExtResource("3_q14x8")]
+
+[node name="FunctionPointer" parent="RightHand" instance=ExtResource("4_p6th5")]
+show_laser = 2
+laser_length = 1
+show_target = true
+
+[node name="PlayerBody" parent="." instance=ExtResource("3_qtbw2")]

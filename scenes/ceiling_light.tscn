@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl5thyn3wf0be"]
+
+[ext_resource type="PackedScene" uid="uid://bmbns5eyn2qeq" path="res://assets/models/lights/ceilingLight.fbx" id="1_v7rwy"]
+
+[node name="ceiling_light" type="Node3D"]
+
+[node name="model" parent="." instance=ExtResource("1_v7rwy")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
