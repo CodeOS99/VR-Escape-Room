@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://ddmcss202ktf"]
+[gd_scene load_steps=66 format=4 uid="uid://ddmcss202ktf"]
 
 [ext_resource type="PackedScene" uid="uid://cox4o5drebclo" path="res://scenes/player.tscn" id="1_hr5cr"]
 [ext_resource type="Shader" path="res://scripts/shaders/wood.gdshader" id="1_ul2em"]
@@ -30,6 +30,18 @@
 [ext_resource type="PackedScene" uid="uid://chjpjul7dp5ac" path="res://assets/models/kitchens/Pan.fbx" id="27_oy5d7"]
 [ext_resource type="PackedScene" uid="uid://nw1r8d8bvkx1" path="res://assets/models/kitchens/Plate.fbx" id="28_gmjch"]
 [ext_resource type="PackedScene" uid="uid://c1dl185cg3rq3" path="res://assets/models/generator/overgrown_train_station_-_power_box.glb" id="30_85v3o"]
+[ext_resource type="PackedScene" uid="uid://b356nqnpdhexy" path="res://assets/models/study_and_sleep/Bed Single.fbx" id="31_txb56"]
+[ext_resource type="PackedScene" uid="uid://cawxacp1is3l6" path="res://assets/models/study_and_sleep/Books A.fbx" id="32_m64us"]
+[ext_resource type="PackedScene" uid="uid://d1g5p7jnnuw8m" path="res://assets/models/study_and_sleep/Books B.fbx" id="33_unk5d"]
+[ext_resource type="PackedScene" uid="uid://4sgyv6p4f7m1" path="res://assets/models/study_and_sleep/Shelf E.fbx" id="34_qqoq4"]
+[ext_resource type="PackedScene" uid="uid://duddr50jodons" path="res://assets/models/study_and_sleep/Clock.fbx" id="35_ldrj1"]
+[ext_resource type="PackedScene" uid="uid://dyab8thoetyny" path="res://assets/models/study_and_sleep/Globe.fbx" id="36_1nivk"]
+[ext_resource type="PackedScene" uid="uid://bbwh7c8mbokc0" path="res://assets/models/study_and_sleep/Vase.fbx" id="37_36trm"]
+[ext_resource type="PackedScene" uid="uid://b36fagbegc3am" path="res://assets/models/study_and_sleep/Speaker.fbx" id="38_8lgux"]
+[ext_resource type="PackedScene" uid="uid://cnv8potvs4tem" path="res://assets/models/study_and_sleep/Plant B.fbx" id="39_7encb"]
+[ext_resource type="PackedScene" uid="uid://lah7w2wptj0g" path="res://assets/models/study_and_sleep/Plant A.fbx" id="40_6b4pn"]
+[ext_resource type="PackedScene" uid="uid://ct1dokc5xbtik" path="res://assets/models/study_and_sleep/Broom.fbx" id="41_21813"]
+[ext_resource type="PackedScene" uid="uid://kt66sfahkmqa" path="res://assets/models/study_and_sleep/Lamp C.fbx" id="42_ls4yq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifwqx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -290,6 +302,18 @@ mesh = SubResource("BoxMesh_rxxtu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48058, 6.80028, -6.54215)
 mesh = SubResource("BoxMesh_hvkx6")
 
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44066, 1.76296, 3.04837)
+mesh = SubResource("BoxMesh_ht3pn")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44066, 1.76296, 10.5031)
+mesh = SubResource("BoxMesh_rxxtu")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42297, 6.80028, 7.90525)
+mesh = SubResource("BoxMesh_hvkx6")
+
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93381, 2.57452, -1.49159)
 mesh = SubResource("BoxMesh_tqhjq")
@@ -322,8 +346,11 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.05251, 8.70321, -6.1
 [node name="window_door" parent="." instance=ExtResource("4_ksu87")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.67836, 1.90842, -6.71101)
 
+[node name="window_door2" parent="." instance=ExtResource("4_ksu87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.09384, 1.90842, 7.77321)
+
 [node name="ceiling_light" parent="." instance=ExtResource("2_igtg4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23027, 8.79427, 7.29144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23027, 8.79427, 7.49818)
 
 [node name="SpotLight3D" parent="ceiling_light" index="1"]
 light_energy = 1.646
@@ -490,6 +517,68 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10454, 2.51, -8.23976)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="charge_holders/holder4"]
 material_override = SubResource("StandardMaterial3D_eo4f4")
 mesh = SubResource("CapsuleMesh_n8pbo")
+
+[node name="Bed Single" parent="." instance=ExtResource("31_txb56")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 6.09598, 0.905327, 1.61761)
+
+[node name="CeilingFan2" parent="." instance=ExtResource("8_85lm3")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 8.75425, 8.69432, 2.19492)
+
+[node name="Books A" parent="." instance=ExtResource("32_m64us")]
+transform = Transform3D(0.187479, 0, 0.234204, 0, 0.3, 0, -0.234204, 0, 0.187479, 9.41727, 0.774339, 1.22254)
+
+[node name="Books A2" parent="." instance=ExtResource("32_m64us")]
+transform = Transform3D(0.3, 0, 0, 0, 0.297663, -0.0373714, 0, 0.0373714, 0.297663, 10.2204, 1.73158, 0.147488)
+
+[node name="Books A3" parent="." instance=ExtResource("32_m64us")]
+transform = Transform3D(0.3, 0, 0, 0, 0.219131, 0.204894, 0, -0.204894, 0.219131, 8.1855, 0.619188, -0.837624)
+
+[node name="Books B" parent="." instance=ExtResource("33_unk5d")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 9, 0.682808, 2)
+
+[node name="Shelf E" parent="." instance=ExtResource("34_qqoq4")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 10.4953, 1.77909, 0.328519)
+
+[node name="Shelf E2" parent="." instance=ExtResource("34_qqoq4")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 10.4953, 1.77909, 2.3595)
+
+[node name="Shelf E3" parent="." instance=ExtResource("34_qqoq4")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 10.4953, 1.77909, 4.45656)
+
+[node name="Clock" parent="." instance=ExtResource("35_ldrj1")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 10.8556, 8.01285, -0.110046)
+
+[node name="Globe" parent="." instance=ExtResource("36_1nivk")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 10.5498, 2.48985, 4.94195)
+
+[node name="Vase" parent="." instance=ExtResource("37_36trm")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 10.4786, 2.37898, 4.02933)
+
+[node name="Speaker" parent="." instance=ExtResource("38_8lgux")]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 10.4254, 1.65312, 3.99145)
+
+[node name="Plant B" parent="." instance=ExtResource("39_7encb")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 10.3726, 0.911849, 4.91395)
+
+[node name="Plant A" parent="." instance=ExtResource("40_6b4pn")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 10.3915, 1.37183, 9.33111)
+
+[node name="Plant A3" parent="." instance=ExtResource("40_6b4pn")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 9.07429, 1.37183, 9.33111)
+
+[node name="Plant A2" parent="." instance=ExtResource("40_6b4pn")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 10.3915, 1.37183, 7.90051)
+
+[node name="Broom" parent="." instance=ExtResource("41_21813")]
+transform = Transform3D(0.3, 0, 0, 0, 0.250688, 0.16479, 0, -0.16479, 0.250688, 10.4712, 1, 6.25902)
+
+[node name="Lamp C" parent="." instance=ExtResource("42_ls4yq")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 10.4852, 1.60961, 1.97631)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamp C"]
+transform = Transform3D(6.66667, 0, 0, 0, 6.66667, 0, 0, 0, 6.66667, 0, 1.40044, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 3.30563
 
 [editable path="ceiling_light"]
 [editable path="big_tv"]
