@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://ddmcss202ktf"]
+[gd_scene load_steps=54 format=4 uid="uid://ddmcss202ktf"]
 
 [ext_resource type="PackedScene" uid="uid://cox4o5drebclo" path="res://scenes/player.tscn" id="1_hr5cr"]
 [ext_resource type="Shader" path="res://scripts/shaders/wood.gdshader" id="1_ul2em"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://ind552cfkb28" path="res://assets/models/kitchens/Kettle.fbx" id="19_ig42p"]
 [ext_resource type="PackedScene" uid="uid://dlxmaowk8pai6" path="res://assets/models/kitchens/Kitchen Roll.fbx" id="20_5nyf0"]
 [ext_resource type="PackedScene" uid="uid://jx30jsuthht2" path="res://assets/models/kitchens/Knife Block.fbx" id="21_d7oon"]
+[ext_resource type="PackedScene" uid="uid://2j2l2cagafjv" path="res://assets/models/generator/gen2/old_generator_game_asset.glb" id="21_th3rg"]
 [ext_resource type="PackedScene" uid="uid://dndebr2p14t26" path="res://assets/models/kitchens/Toaster.fbx" id="22_e1ypp"]
 [ext_resource type="PackedScene" uid="uid://qivvaaagqeig" path="res://assets/models/kitchens/Rounded Table A.fbx" id="23_d7s18"]
 [ext_resource type="PackedScene" uid="uid://yguqfaxib3gg" path="res://assets/models/kitchens/Chair A.fbx" id="24_3lapj"]
@@ -28,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://dwt2x4y6lq6ox" path="res://assets/models/kitchens/Mug.fbx" id="26_7m04l"]
 [ext_resource type="PackedScene" uid="uid://chjpjul7dp5ac" path="res://assets/models/kitchens/Pan.fbx" id="27_oy5d7"]
 [ext_resource type="PackedScene" uid="uid://nw1r8d8bvkx1" path="res://assets/models/kitchens/Plate.fbx" id="28_gmjch"]
+[ext_resource type="PackedScene" uid="uid://c1dl185cg3rq3" path="res://assets/models/generator/overgrown_train_station_-_power_box.glb" id="30_85v3o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifwqx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -221,6 +223,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0oh1j")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eo4f4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n8pbo"]
+radius = 0.2
+height = 1.0
+
 [node name="main_room" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -269,12 +278,28 @@ mesh = SubResource("BoxMesh_rxxtu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6655, 6.80028, -6.54215)
 mesh = SubResource("BoxMesh_hvkx6")
 
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49827, 1.76296, -11.399)
+mesh = SubResource("BoxMesh_ht3pn")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49827, 1.76296, -3.94425)
+mesh = SubResource("BoxMesh_rxxtu")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48058, 6.80028, -6.54215)
+mesh = SubResource("BoxMesh_hvkx6")
+
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93381, 2.57452, -1.49159)
 mesh = SubResource("BoxMesh_tqhjq")
 
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.79583, 2.57452, -1.49159)
+mesh = SubResource("BoxMesh_tqhjq")
+
 [node name="player" parent="." instance=ExtResource("1_hr5cr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05418, 2.2199, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0541782, 2.2199, -4.10889)
 
 [node name="small_brown_carpet" parent="." instance=ExtResource("3_tqmpm")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.0623065, 0.510885, -9.10301)
@@ -298,7 +323,7 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.05251, 8.70321, -6.1
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.67836, 1.90842, -6.71101)
 
 [node name="ceiling_light" parent="." instance=ExtResource("2_igtg4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23027, 8.79427, 0.236398)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23027, 8.79427, 7.29144)
 
 [node name="SpotLight3D" parent="ceiling_light" index="1"]
 light_energy = 1.646
@@ -316,6 +341,23 @@ omni_range = 1.89383
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -2.19363, 5.08944, -6.51702)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="square_window2"]
+transform = Transform3D(3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, 0, -0.213586)
+light_energy = 0.192
+omni_range = 1.89383
+
+[node name="square_window3" parent="." instance=ExtResource("10_5wd6i")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 4.99293, 5.08944, -6.51702)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="square_window3"]
+transform = Transform3D(3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, 0, 0.521696)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.192
+omni_range = 1.89383
+
+[node name="square_window4" parent="." instance=ExtResource("10_5wd6i")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 3.96358, 5.08944, -6.51702)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="square_window4"]
 transform = Transform3D(3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, 0, -0.213586)
 light_energy = 0.192
 omni_range = 1.89383
@@ -371,6 +413,9 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -9.71547, 3.31991, 0.28
 [node name="Kitchen Roll" parent="." instance=ExtResource("20_5nyf0")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -10.3448, 2.97155, 7.55508)
 
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("21_th3rg")]
+transform = Transform3D(-6.55671e-10, 0, -0.015, 0, 0.015, 0, 0.015, 0, -6.55671e-10, 8.35555, 0, -4.52101)
+
 [node name="Knife Block" parent="." instance=ExtResource("21_d7oon")]
 transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -10.0983, 3.0563, 6.24883)
 
@@ -416,7 +461,38 @@ transform = Transform3D(0.354422, 0, -0.352682, 0, 0.5, 0, 0.352682, 0, 0.354422
 [node name="Plate" parent="." instance=ExtResource("28_gmjch")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -5.08603, 2.24396, 5.15502)
 
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("30_85v3o")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 8.11207, 3.11182, -9.43703)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_Scene"]
+transform = Transform3D(33.3333, 0, 0, 0, 33.3333, 0, 0, 0, 33.3333, 0, 40.149, 32.4001)
+light_color = Color(0.698154, 0.00698815, 9.62615e-08, 1)
+
+[node name="charge_holders" type="Node3D" parent="."]
+
+[node name="holder2" type="Node3D" parent="charge_holders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10454, 2.51, -9.6316)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="charge_holders/holder2"]
+material_override = SubResource("StandardMaterial3D_eo4f4")
+mesh = SubResource("CapsuleMesh_n8pbo")
+
+[node name="holder3" type="Node3D" parent="charge_holders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10454, 2.51, -8.99464)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="charge_holders/holder3"]
+material_override = SubResource("StandardMaterial3D_eo4f4")
+mesh = SubResource("CapsuleMesh_n8pbo")
+
+[node name="holder4" type="Node3D" parent="charge_holders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10454, 2.51, -8.23976)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="charge_holders/holder4"]
+material_override = SubResource("StandardMaterial3D_eo4f4")
+mesh = SubResource("CapsuleMesh_n8pbo")
+
 [editable path="ceiling_light"]
 [editable path="big_tv"]
 [editable path="ceiling_light2"]
 [editable path="Oven"]
+[editable path="Sketchfab_Scene"]
