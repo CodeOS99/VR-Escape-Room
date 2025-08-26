@@ -1,0 +1,73 @@
+[gd_scene load_steps=14 format=3 uid="uid://qoxdkp8rdasa"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_sl101"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="2_4tgoq"]
+[ext_resource type="Animation" uid="uid://dqa0h82y3qn1t" path="res://addons/godot-xr-tools/hands/animations/left/Grip 1.res" id="3_4od2t"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="4_f0iyu"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_y18aw"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="6_76sf3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r7wy0"]
+radius = 0.197969
+height = 0.96608
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wstoy"]
+albedo_color = Color(0, 0.819608, 0, 1)
+metallic = 1.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(0, 0.749434, 0, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_eakat"]
+radius = 0.2
+height = 1.0
+
+[sub_resource type="Resource" id="Resource_7rk75"]
+script = ExtResource("4_f0iyu")
+closed_pose = ExtResource("3_4od2t")
+
+[sub_resource type="Resource" id="Resource_gjsv1"]
+script = ExtResource("4_f0iyu")
+closed_pose = ExtResource("3_4od2t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ih6r"]
+albedo_color = Color(0, 0.819608, 0, 1)
+metallic = 1.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.107796, 0.344801, 1, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qt663"]
+radius = 0.2
+height = 1.0
+
+[node name="battery" groups=["Battery"] instance=ExtResource("1_sl101")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("CapsuleShape3D_r7wy0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_wstoy")
+mesh = SubResource("CapsuleMesh_eakat")
+skeleton = NodePath("../..")
+
+[node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("2_4tgoq")]
+transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, -0.218525, 0.00101126, -0.0452547)
+visible = true
+hand_pose = SubResource("Resource_7rk75")
+
+[node name="GrabPointHandRight" parent="." index="3" instance=ExtResource("5_y18aw")]
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 0.187823, 0.001, -0.041)
+visible = true
+hand_pose = SubResource("Resource_gjsv1")
+
+[node name="XRToolsHighlightVisible" type="Node3D" parent="." index="4"]
+script = ExtResource("6_76sf3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XRToolsHighlightVisible" index="0"]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_0ih6r")
+mesh = SubResource("CapsuleMesh_qt663")
+skeleton = NodePath("../..")

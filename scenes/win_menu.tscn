@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://irovl451w6p8"]
+
+[ext_resource type="PackedScene" uid="uid://b1qrfglnwd06w" path="res://scenes/main_menu.tscn" id="1_2m4ow"]
+
+[node name="win_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="main_menu" parent="." instance=ExtResource("1_2m4ow")]
+layout_mode = 1
+
+[node name="Label" parent="main_menu" index="0"]
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "YOU WON!"
+
+[node name="Button" parent="main_menu" index="2"]
+theme_override_font_sizes/font_size = 175
+text = "PLAY AGAIN!"
+
+[editable path="main_menu"]

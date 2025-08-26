@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhoj8qvolsbmp"]
+
+[ext_resource type="PackedScene" uid="uid://jqd3j3mjmya5" path="res://scenes/spawn.tscn" id="1_emjoj"]
+[ext_resource type="PackedScene" uid="uid://irovl451w6p8" path="res://scenes/win_menu.tscn" id="2_d231d"]
+
+[node name="win_scene" type="Node3D"]
+
+[node name="node" parent="." instance=ExtResource("1_emjoj")]
+
+[node name="player" parent="node" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.242233, 1.8066, 0)
+
+[node name="Viewport2Din3D" parent="node" index="5"]
+scene = ExtResource("2_d231d")
+scene_properties_keys = PackedStringArray()
+
+[editable path="node"]

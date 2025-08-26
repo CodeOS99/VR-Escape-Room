@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=4 uid="uid://ddmcss202ktf"]
+[gd_scene load_steps=114 format=4 uid="uid://ddmcss202ktf"]
 
 [ext_resource type="PackedScene" uid="uid://cox4o5drebclo" path="res://scenes/player.tscn" id="1_hr5cr"]
 [ext_resource type="Shader" path="res://scripts/shaders/wood.gdshader" id="1_ul2em"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cj4m2hrp334j0" path="res://assets/models/bathroom/Sink.fbx" id="3_flnk4"]
 [ext_resource type="PackedScene" uid="uid://bw6cm6c33en6s" path="res://assets/models/carpets/small_brown/small_brown_carpet.fbx" id="3_tqmpm"]
 [ext_resource type="PackedScene" uid="uid://djcw5uhkqavg7" path="res://assets/models/carpets/round/round_carpet.fbx" id="4_am6bx"]
+[ext_resource type="PackedScene" uid="uid://w8f0flwor8aq" path="res://scenes/window_door.tscn" id="4_ksu87"]
 [ext_resource type="Texture2D" uid="uid://cspfrstseaywe" path="res://assets/snad.jpeg" id="4_vigh7"]
 [ext_resource type="PackedScene" uid="uid://bjh5yx13dgrwm" path="res://assets/models/shelf/triple_wall/triple_wall_shelf.fbx" id="5_bh5jn"]
 [ext_resource type="PackedScene" uid="uid://tfcvhfcjwqwn" path="res://assets/models/sofas/triple/triple_sofa.fbx" id="5_d4lhx"]
@@ -42,8 +43,6 @@
 [ext_resource type="PackedScene" uid="uid://dyab8thoetyny" path="res://assets/models/study_and_sleep/Globe.fbx" id="36_1nivk"]
 [ext_resource type="PackedScene" uid="uid://bbwh7c8mbokc0" path="res://assets/models/study_and_sleep/Vase.fbx" id="37_36trm"]
 [ext_resource type="PackedScene" uid="uid://b36fagbegc3am" path="res://assets/models/study_and_sleep/Speaker.fbx" id="38_8lgux"]
-[ext_resource type="Script" path="res://scripts/battery_holder.gd" id="38_ds1hd"]
-[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="38_ydmws"]
 [ext_resource type="PackedScene" uid="uid://cnv8potvs4tem" path="res://assets/models/study_and_sleep/Plant B.fbx" id="39_7encb"]
 [ext_resource type="PackedScene" uid="uid://lah7w2wptj0g" path="res://assets/models/study_and_sleep/Plant A.fbx" id="40_6b4pn"]
 [ext_resource type="PackedScene" uid="uid://ct1dokc5xbtik" path="res://assets/models/study_and_sleep/Broom.fbx" id="41_21813"]
@@ -59,7 +58,6 @@
 [ext_resource type="PackedScene" uid="uid://dq7iendk3rfby" path="res://scenes/coin.tscn" id="56_fnsf1"]
 [ext_resource type="PackedScene" uid="uid://cxx3iyp5khh7f" path="res://scenes/secret_code.tscn" id="57_uq1uf"]
 [ext_resource type="PackedScene" uid="uid://qoxdkp8rdasa" path="res://scenes/battery.tscn" id="58_bb5hw"]
-[ext_resource type="PackedScene" uid="uid://bal1jp7blv6yf" path="res://scenes/numpad.tscn" id="60_upk3y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifwqx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -341,9 +339,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0oh1j")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o411w"]
-points = PackedVector3Array(9.97484e-05, 0.0284553, 0.0126396, 9.97484e-05, 0.0274995, 0.0150157, 0.0221559, 0.0237832, 0.0150157, 0.0229153, 0.0246041, 0.0126396, 0.0274801, 0.0159964, -0.0200929, -0.0275665, 0.0159964, -0.0200929, -0.0227247, 0.0246041, 0.0126396, -0.0219654, 0.0237832, 0.0150157, 0.0383072, 0.0136181, 0.0150157, 0.0396115, 0.014096, 0.0126396, 0.0277124, 0.0157602, -0.0200929, 0.0274801, 0.0157602, -0.0205243, -0.0275665, 0.0157602, -0.0205243, -0.0277988, 0.0157602, -0.0200929, -0.0394209, 0.0140904, 0.0126396, -0.0381167, 0.0136181, 0.0150157, 0.0442121, -0.000263225, 0.0150157, 0.0457308, -0.000263225, 0.0126396, 0.0274801, -0.0155727, -0.0205243, -0.0275665, -0.0155727, -0.0205243, -0.0455313, -0.000268847, 0.0126396, -0.0440216, -0.000268847, 0.0150157, 0.0383072, -0.0141502, 0.0150157, 0.0396115, -0.0146281, 0.0126396, 0.0277124, -0.0155727, -0.0200929, 0.0274801, -0.0158032, -0.0200929, -0.0275665, -0.0158032, -0.0200929, -0.0277988, -0.0155727, -0.0200929, -0.0394209, -0.0146281, 0.0126396, -0.0381167, -0.0141502, 0.0150157, 0.0221559, -0.0243153, 0.0150157, 0.0229153, -0.0251361, 0.0126396, 9.97484e-05, -0.0289818, 0.0126396, 9.97484e-05, -0.0280316, 0.0102671, -0.0227158, -0.0251361, 0.0126396, -0.0219654, -0.0243153, 0.0150157, 9.97484e-05, -0.0280316, 0.0150157)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gopd5"]
 albedo_color = Color(0, 0, 0, 1)
 emission = Color(0, 0.749434, 0, 1)
@@ -352,10 +347,6 @@ emission_energy_multiplier = 2.0
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qbbh6"]
 radius = 0.2
 height = 1.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_m8ggm"]
-resource_local_to_scene = true
-radius = 0.3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ufey"]
 resource_name = "White"
@@ -669,6 +660,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87631, -10.2745)
 [node name="CeilingFan" parent="." instance=ExtResource("8_85lm3")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.05251, 8.70321, -6.19784)
 
+[node name="window_door" parent="." instance=ExtResource("4_ksu87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.67836, 1.90842, -6.71101)
+
 [node name="locked_door" parent="." instance=ExtResource("55_ntpi1")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.094, 1.908, 7.773)
 
@@ -823,11 +817,6 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -9.88689, 2.73136, 7.99
 [node name="Rounded Table A" parent="." instance=ExtResource("23_d7s18")]
 transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -4.58612, 1.44126, 3.60929)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Rounded Table A/Rounded table A" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Rounded Table A/Rounded table A/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_o411w")
-
 [node name="Chair A" parent="." instance=ExtResource("24_3lapj")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -6.38977, 1.48864, 3.91932)
 
@@ -879,16 +868,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10454, 2.51, -9.6316)
 [node name="holder3" type="Node3D" parent="charge_holders"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10454, 2.51, -8.99464)
 
-[node name="batteryHolder" type="MeshInstance3D" parent="charge_holders/holder3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="charge_holders/holder3"]
 material_override = SubResource("StandardMaterial3D_gopd5")
 mesh = SubResource("CapsuleMesh_qbbh6")
-script = ExtResource("38_ds1hd")
-
-[node name="SnapZone" parent="charge_holders/holder3/batteryHolder" instance=ExtResource("38_ydmws")]
-grab_exclude = "Hand"
-
-[node name="CollisionShape3D" parent="charge_holders/holder3/batteryHolder/SnapZone" index="0"]
-shape = SubResource("SphereShape3D_m8ggm")
 
 [node name="holder4" type="Node3D" parent="charge_holders"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10454, 2.51, -8.23976)
@@ -1006,25 +988,11 @@ scene_properties_keys = PackedStringArray()
 [node name="battery" parent="." instance=ExtResource("58_bb5hw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.7601, 2.70393, 2.61506)
 
-[node name="numpad" parent="." instance=ExtResource("51_mk8bk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47327, 1.90193, -10.1827)
-scene = ExtResource("60_upk3y")
-viewport_size = Vector2(393, 478)
-scene_properties_keys = PackedStringArray("numpad.gd")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="numpad"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0171974, 0.653639, 0)
-light_energy = 1.646
-
-[connection signal="has_picked_up" from="charge_holders/holder3/batteryHolder/SnapZone" to="charge_holders/holder3/batteryHolder" method="_on_snap_zone_has_picked_up"]
-
 [editable path="ceiling_light"]
 [editable path="big_tv"]
 [editable path="ceiling_light2"]
 [editable path="long_dresser"]
 [editable path="long_dresser/drawer"]
 [editable path="Oven"]
-[editable path="Rounded Table A"]
 [editable path="Sketchfab_Scene"]
-[editable path="charge_holders/holder3/batteryHolder/SnapZone"]
 [editable path="Mirror A"]

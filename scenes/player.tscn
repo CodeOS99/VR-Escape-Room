@@ -13,7 +13,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739119, 0)
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 
-[node name="LeftHand" type="XRController3D" parent="."]
+[node name="LeftHand" type="XRController3D" parent="." groups=["Hand"]]
 tracker = &"left_hand"
 
 [node name="LeftHand" parent="LeftHand" instance=ExtResource("1_64ag6")]
@@ -28,7 +28,7 @@ show_laser = 2
 laser_length = 1
 show_target = true
 
-[node name="RightHand" type="XRController3D" parent="."]
+[node name="RightHand" type="XRController3D" parent="." groups=["Hand"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, 0, 0)
 tracker = &"right_hand"
 
