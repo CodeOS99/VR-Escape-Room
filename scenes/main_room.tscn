@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=4 uid="uid://ddmcss202ktf"]
+[gd_scene load_steps=111 format=4 uid="uid://ddmcss202ktf"]
 
 [ext_resource type="PackedScene" uid="uid://cox4o5drebclo" path="res://scenes/player.tscn" id="1_hr5cr"]
 [ext_resource type="Shader" path="res://scripts/shaders/wood.gdshader" id="1_ul2em"]
@@ -54,6 +54,8 @@
 [ext_resource type="PackedScene" uid="uid://cxo3dhq5tnymq" path="res://assets/models/bathroom/Mirror A.fbx" id="49_50irt"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="51_mk8bk"]
 [ext_resource type="PackedScene" uid="uid://d15i4xxjwpoio" path="res://scenes/tv_clue_scene.tscn" id="52_15coo"]
+[ext_resource type="PackedScene" uid="uid://tu0m6dwck0vp" path="res://scenes/locked_door.tscn" id="55_ntpi1"]
+[ext_resource type="PackedScene" uid="uid://dq7iendk3rfby" path="res://scenes/coin.tscn" id="56_fnsf1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ifwqx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -966,6 +968,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.30082, 2.75879, -8.98175)
 screen_size = Vector2(2.495, 1.295)
 scene = ExtResource("52_15coo")
 scene_properties_keys = PackedStringArray()
+
+[node name="locked_door" parent="." instance=ExtResource("55_ntpi1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5729, 2.04899, -2.19522)
+
+[node name="Coin" parent="." instance=ExtResource("56_fnsf1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.143474, 2.96895, -3.57998)
 
 [editable path="ceiling_light"]
 [editable path="big_tv"]

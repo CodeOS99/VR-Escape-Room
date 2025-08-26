@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://bu1t2orqlnju6"]
+[gd_scene load_steps=15 format=4 uid="uid://bu1t2orqlnju6"]
 
 [ext_resource type="PackedScene" uid="uid://bddj5m7ull6g0" path="res://addons/godot-xr-tools/interactables/interactable_handle.tscn" id="2_8s2c8"]
+[ext_resource type="PackedScene" uid="uid://dq7iendk3rfby" path="res://scenes/coin.tscn" id="2_j1xra"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="3_hpqem"]
 [ext_resource type="PackedScene" uid="uid://b0r6edl74ddo7" path="res://addons/godot-xr-tools/interactables/interactable_slider.tscn" id="5_j5de3"]
 
@@ -147,6 +148,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ibgm1")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_more7"]
+size = Vector3(1.7655, 0.113342, 2.19525)
+
 [node name="drawer" type="Node3D"]
 
 [node name="InteractableSlider" parent="." instance=ExtResource("5_j5de3")]
@@ -157,6 +161,9 @@ slider_limit_max = 8.63
 transform = Transform3D(-4.37114e-06, -100, -4.37114e-06, 0, -4.37114e-06, 100, -100, 4.37114e-06, 1.91069e-13, 0, 0, 0)
 mesh = SubResource("ArrayMesh_q00cq")
 skeleton = NodePath("")
+
+[node name="Coin" parent="InteractableSlider" instance=ExtResource("2_j1xra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.656027, 0.802302, 3.00556)
 
 [node name="handle" type="Node3D" parent="InteractableSlider"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.474075, 0.719949, 2.58046)
@@ -174,3 +181,9 @@ script = ExtResource("3_hpqem")
 transform = Transform3D(-1.74846e-06, -40, -1.74846e-06, 0, -1.74846e-06, 40, -40, 1.74846e-06, 7.64274e-14, 0, -0.195, -1.04)
 mesh = SubResource("ArrayMesh_ks1a2")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40315, 0.745631, 2.53623)
+shape = SubResource("BoxShape3D_more7")
