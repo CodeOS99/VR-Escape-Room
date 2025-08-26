@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="6_xh0ax"]
 
 [node name="player" type="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739119, 0)
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 
@@ -43,3 +44,5 @@ laser_length = 1
 show_target = true
 
 [node name="PlayerBody" parent="." instance=ExtResource("3_qtbw2")]
+player_height_min = 3.0
+player_height_max = 3.0

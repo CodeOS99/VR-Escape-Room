@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlaq3f3hiu07f"
-path.s3tc="res://.godot/imported/godotwaka.png-ef0518417b4f997d237759e5551dd05d.s3tc.ctex"
+uid="uid://cspfrstseaywe"
+path.s3tc="res://.godot/imported/snad.jpeg-2343255af888e228d5e86658084eb402.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/godotwaka.png"
-dest_files=["res://.godot/imported/godotwaka.png-ef0518417b4f997d237759e5551dd05d.s3tc.ctex"]
+source_file="res://assets/snad.jpeg"
+dest_files=["res://.godot/imported/snad.jpeg-2343255af888e228d5e86658084eb402.s3tc.ctex"]
 
 [params]
 

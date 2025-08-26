@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=4 uid="uid://ddmcss202ktf"]
+[gd_scene load_steps=111 format=4 uid="uid://ddmcss202ktf"]
 
 [ext_resource type="PackedScene" uid="uid://cox4o5drebclo" path="res://scenes/player.tscn" id="1_hr5cr"]
 [ext_resource type="Shader" path="res://scripts/shaders/wood.gdshader" id="1_ul2em"]
@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://dg1ktiydjcebp" path="res://assets/models/kitchens/Cupboard C.fbx" id="16_who8v"]
 [ext_resource type="PackedScene" uid="uid://bu1t2orqlnju6" path="res://scenes/drawer.tscn" id="17_3f671"]
 [ext_resource type="PackedScene" uid="uid://bw05bvaqy8n0p" path="res://assets/models/kitchens/Fridge A.fbx" id="17_7rkdm"]
-[ext_resource type="PackedScene" uid="uid://buen17qp71ugk" path="res://scenes/bigger_drawer.tscn" id="18_62t6i"]
 [ext_resource type="PackedScene" uid="uid://cuxifx3dw1jtf" path="res://assets/models/kitchens/Oven.fbx" id="18_iqe4x"]
 [ext_resource type="PackedScene" uid="uid://ind552cfkb28" path="res://assets/models/kitchens/Kettle.fbx" id="19_ig42p"]
 [ext_resource type="PackedScene" uid="uid://dlxmaowk8pai6" path="res://assets/models/kitchens/Kitchen Roll.fbx" id="20_5nyf0"]
@@ -264,6 +263,15 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_p5sv8")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ce4dd"]
+points = PackedVector3Array(0.03635, 0.0167368, 0.00462904, 0.03635, 0.0164936, 0.00487148, 0.0365297, 0.0164936, 0.00462904, 0.03635, 0.0167368, -0.00720714, 6.65471e-06, 0.0167368, 0.00462904, 6.65471e-06, 0.0164936, 0.00487269, 0.03635, -0.00358608, 0.00487148, 0.00094784, 0.0156047, 0.00487269, 0.0365297, 0.0164936, -0.00720714, 0.0365297, -0.00358608, 0.00462904, 0.03635, 0.0164936, -0.00744958, 6.65471e-06, 0.0167368, -0.00720714, -0.000169368, 0.0164936, 0.00462904, 6.65471e-06, -0.00358608, 0.00487269, 0.03635, -0.00382937, 0.00462904, 0.00094784, -0.00269965, 0.00487269, 0.0365297, -0.00358608, -0.00720714, 0.03635, -0.00358608, -0.00744958, 6.65471e-06, 0.0164936, -0.00744958, -0.000169368, 0.0164936, -0.00720714, -0.000169368, -0.00358608, 0.00462904, 6.65471e-06, -0.00382937, 0.00462904, 0.03635, -0.00382937, -0.00720714, 0.0198542, -0.00752927, -0.000350044, 0.0208205, -0.00760394, -0.000491166, 0.0203248, -0.00787131, -0.00129207, 6.65471e-06, -0.00358608, -0.00744958, -0.000169368, -0.00358608, -0.00720714, 6.65471e-06, -0.00382937, -0.00720714, 0.0207953, -0.00752927, -0.00223529, 0.019829, -0.00760394, -0.00209417)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bmkrl"]
+points = PackedVector3Array(-0.000491131, 0.0167368, 0.00462904, -0.000491131, 0.0164936, 0.00487148, -0.000311516, 0.0164936, 0.00462904, -0.000491131, 0.0167368, -0.00720714, -0.0368345, 0.0167368, 0.00462904, -0.0368345, 0.0164936, 0.00487269, -0.000491131, -0.00358608, 0.00487148, -0.0358933, 0.0156047, 0.00487269, -0.000311516, 0.0164936, -0.00720714, -0.000311516, -0.00358608, 0.00462904, -0.000491131, 0.0164936, -0.00744958, -0.0368345, 0.0167368, -0.00720714, -0.0370105, 0.0164936, 0.00462904, -0.0368345, -0.00358608, 0.00487269, -0.000491131, -0.00382937, 0.00462904, -0.0358933, -0.00269965, 0.00487269, -0.000311516, -0.00358608, -0.00720714, -0.000491131, -0.00358608, -0.00744958, -0.0368345, 0.0164936, -0.00744958, -0.0370105, 0.0164936, -0.00720714, -0.0370105, -0.00358608, 0.00462904, -0.0368345, -0.00382937, 0.00462904, -0.000491131, -0.00382937, -0.00720714, -0.0193436, -0.00752927, -0.000350044, -0.0183772, -0.00760394, -0.000491166, -0.0188694, -0.00787131, -0.00129207, -0.0368345, -0.00358608, -0.00744958, -0.0370105, -0.00358608, -0.00720714, -0.0368345, -0.00382937, -0.00720714, -0.0183988, -0.00752927, -0.00223529, -0.0193651, -0.00760394, -0.00209417)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_48unt"]
+points = PackedVector3Array(-0.000491131, 0.0167368, -0.00788305, -0.000491131, 0.0164936, -0.00764061, -0.000311516, 0.0164936, -0.00788305, -0.000491131, 0.0167368, -0.0197192, -0.0368345, 0.0167368, -0.00788305, -0.0368345, 0.0164936, -0.0076394, -0.000491131, -0.00358608, -0.00764061, -0.0358933, 0.0156047, -0.0076394, -0.000311516, 0.0164936, -0.0197192, -0.000311516, -0.00358608, -0.00788305, -0.000491131, 0.0164936, -0.0199617, -0.0368345, 0.0167368, -0.0197192, -0.0370105, 0.0164936, -0.00788305, -0.0368345, -0.00358608, -0.0076394, -0.000491131, -0.00382937, -0.00788305, -0.0358933, -0.00269965, -0.0076394, -0.000311516, -0.00358608, -0.0197192, -0.000491131, -0.00358608, -0.0199617, -0.0368345, 0.0164936, -0.0199617, -0.0370105, 0.0164936, -0.0197192, -0.0370105, -0.00358608, -0.00788305, -0.0368345, -0.00382937, -0.00788305, -0.000491131, -0.00382937, -0.0197192, -0.0193436, -0.00752927, -0.0126317, -0.0183772, -0.00760394, -0.0127717, -0.0188694, -0.00787131, -0.0135738, -0.0368345, -0.00358608, -0.0199617, -0.0370105, -0.00358608, -0.0197192, -0.0368345, -0.00382937, -0.0197192, -0.0183988, -0.00752927, -0.0145158, -0.0193651, -0.00760394, -0.0143759)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4noy"]
 resource_name = "Blue 2"
@@ -724,38 +732,28 @@ visible = false
 [node name="Drawer A_003" parent="long_dresser" index="3"]
 visible = false
 
-[node name="Drawer A_004" parent="long_dresser" index="4"]
-visible = false
+[node name="StaticBody3D" type="StaticBody3D" parent="long_dresser/Drawer A_004" index="0"]
 
-[node name="Drawer A_005" parent="long_dresser" index="5"]
-visible = false
+[node name="CollisionShape3D" type="CollisionShape3D" parent="long_dresser/Drawer A_004/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ce4dd")
 
-[node name="Drawer A_006" parent="long_dresser" index="6"]
-visible = false
+[node name="StaticBody3D" type="StaticBody3D" parent="long_dresser/Drawer A_005" index="0"]
 
-[node name="Drawer A_007" parent="long_dresser" index="7"]
-visible = false
+[node name="CollisionShape3D" type="CollisionShape3D" parent="long_dresser/Drawer A_005/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_bmkrl")
 
-[node name="drawer" parent="long_dresser" instance=ExtResource("17_3f671")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="long_dresser/Drawer A_006" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="long_dresser/Drawer A_006/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_48unt")
 
 [node name="drawer2" parent="long_dresser" instance=ExtResource("17_3f671")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.46907, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4315, 0, 0)
 
 [node name="drawer3" parent="long_dresser" instance=ExtResource("17_3f671")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.94958, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92176, 0, 0)
 
-[node name="bigger_drawer" parent="long_dresser" instance=ExtResource("18_62t6i")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-
-[node name="bigger_drawer2" parent="long_dresser" instance=ExtResource("18_62t6i")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.71683, 0, 0)
-
-[node name="bigger_drawer3" parent="long_dresser" instance=ExtResource("18_62t6i")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.71683, -1.18772, 0)
-
-[node name="bigger_drawer4" parent="long_dresser" instance=ExtResource("18_62t6i")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0129986, -1.18772, 0)
+[node name="drawer" parent="long_dresser" instance=ExtResource("17_3f671")]
 
 [node name="Fan" parent="." instance=ExtResource("14_a2n5a")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -9.79001, 3.24481, 3.47421)
