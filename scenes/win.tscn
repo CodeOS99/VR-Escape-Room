@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhoj8qvolsbmp"]
+[gd_scene load_steps=11 format=3 uid="uid://bhoj8qvolsbmp"]
 
+[ext_resource type="Script" path="res://scripts/win.gd" id="1_sbo8t"]
 [ext_resource type="PackedScene" uid="uid://cox4o5drebclo" path="res://scenes/player.tscn" id="1_wh8yi"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="2_b5443"]
 [ext_resource type="PackedScene" uid="uid://irovl451w6p8" path="res://scenes/win_menu.tscn" id="2_d231d"]
+[ext_resource type="AudioStream" uid="uid://xmcjnssl40ww" path="res://assets/sounds/victoryBgMusic.mp3" id="5_ubp54"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4fi60"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -24,6 +26,7 @@ size = Vector3(25, 1, 25)
 size = Vector3(25, 1, 25)
 
 [node name="win_scene" type="Node3D"]
+script = ExtResource("1_sbo8t")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
@@ -50,3 +53,7 @@ scene_properties_keys = PackedStringArray()
 
 [node name="player" parent="." instance=ExtResource("1_wh8yi")]
 transform = Transform3D(-0.999717, 0, -0.0237866, 0, 1, 0, 0.0237866, 0, -0.999717, 0, 1.86493, -0.356928)
+
+[node name="VictoryBgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ubp54")
+volume_db = -10.0
