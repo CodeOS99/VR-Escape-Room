@@ -646,7 +646,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.51851, 0, 24.6723)
 shape = SubResource("ConvexPolygonShape3D_ubm5q")
 
 [node name="player" parent="." instance=ExtResource("1_hr5cr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.965629, 4.3977, -4.10889)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.01277, 3.8144, -4.10889)
 
 [node name="Coin2" parent="." instance=ExtResource("56_fnsf1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.77715, 0.655895, 1.94029)

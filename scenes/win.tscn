@@ -1,17 +1,52 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhoj8qvolsbmp"]
+[gd_scene load_steps=9 format=3 uid="uid://bhoj8qvolsbmp"]
 
-[ext_resource type="PackedScene" uid="uid://jqd3j3mjmya5" path="res://scenes/spawn.tscn" id="1_emjoj"]
+[ext_resource type="PackedScene" uid="uid://cox4o5drebclo" path="res://scenes/player.tscn" id="1_wh8yi"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="2_b5443"]
 [ext_resource type="PackedScene" uid="uid://irovl451w6p8" path="res://scenes/win_menu.tscn" id="2_d231d"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4fi60"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_f20rw"]
+sky_material = SubResource("ProceduralSkyMaterial_4fi60")
+
+[sub_resource type="Environment" id="Environment_aggbr"]
+background_mode = 2
+sky = SubResource("Sky_f20rw")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_oh1xk"]
+size = Vector3(25, 1, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0r2nw"]
+size = Vector3(25, 1, 25)
 
 [node name="win_scene" type="Node3D"]
 
-[node name="node" parent="." instance=ExtResource("1_emjoj")]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
 
-[node name="player" parent="node" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.242233, 1.8066, 0)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_aggbr")
 
-[node name="Viewport2Din3D" parent="node" index="5"]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_oh1xk")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_0r2nw")
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("2_b5443")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.25059, 2.99861)
+screen_size = Vector2(5, 3)
 scene = ExtResource("2_d231d")
+viewport_size = Vector2(1152, 648)
 scene_properties_keys = PackedStringArray()
 
-[editable path="node"]
+[node name="player" parent="." instance=ExtResource("1_wh8yi")]
+transform = Transform3D(-0.999717, 0, -0.0237866, 0, 1, 0, 0.0237866, 0, -0.999717, 0, 1.86493, -0.356928)

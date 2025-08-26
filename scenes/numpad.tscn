@@ -16,25 +16,27 @@ script = ExtResource("1_b35lp")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
+offset_top = 88.0
 offset_right = 393.0
 offset_bottom = 478.0
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 30.0
-offset_right = 367.0
-offset_bottom = 120.0
+offset_left = 24.0
+offset_top = 112.0
+offset_right = 372.0
+offset_bottom = 160.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fv7cl")
 
 [node name="Label" type="Label" parent="Panel2"]
 layout_mode = 0
-offset_right = 349.0
-offset_bottom = 90.0
-theme_override_font_sizes/font_size = 40
+offset_right = 344.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 26
+text = "SEVEN EIGHT SEVEN EIGHT"
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 1
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
@@ -109,3 +111,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "SUBMIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 392.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 50
+text = "NO POWER"
+horizontal_alignment = 1
+vertical_alignment = 1

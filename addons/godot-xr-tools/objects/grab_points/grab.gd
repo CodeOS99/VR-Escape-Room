@@ -150,9 +150,10 @@ func release() -> void:
 				.bind(copy) \
 				.bind(collision_hand))
 
-	# Report the release
-	print_verbose("%s> released by %s", [what.name, by.name])
-	what.released.emit(what, by)
+	if is_instance_valid(what) and is_instance_valid(by):
+		# Report the release
+		print_verbose("%s> released by %s", [what.name, by.name])
+		what.released.emit(what, by)
 
 
 # Hand has moved too far away from object, can no longer hold on to it.

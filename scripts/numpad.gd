@@ -5,6 +5,7 @@ var curr_code = ""
 var powered_up = false
 
 func _ready() -> void:
+	$Panel2/Label.text = curr_code
 	Globals.numpad_node = self
 	for btn in $GridContainer.get_children():
 		btn.pressed.connect(func():
@@ -16,6 +17,7 @@ func update_code(val):
 	if val == "SUBMIT":
 		if curr_code == correct_code:
 			get_tree().change_scene_to_file("res://scenes/win.tscn")
+			Globals.player.queue_free()
 		else:
 			curr_code = ""
 	else:
@@ -25,3 +27,4 @@ func update_code(val):
 func activate():
 	powered_up = true
 	$Panel2.self_modulate = Color8(0, 255, 0)
+	$Label.text = "OPERATIONAL"

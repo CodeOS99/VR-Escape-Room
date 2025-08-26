@@ -20,7 +20,7 @@ points = PackedVector3Array(0.0268469, 0.00184266, 0.0547862, 0.0268469, -0.0028
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fg1iv"]
 resource_local_to_scene = true
-radius = 0.263058
+radius = 0.3
 
 [node name="locked_door" type="Node3D"]
 script = ExtResource("1_5dje7")
